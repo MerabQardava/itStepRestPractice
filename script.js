@@ -46,6 +46,10 @@ async function loadProductsPage(page){
 
 async function fillProductArr(){
 
+    if(!window.location.href.split("?")[1]){
+        window.location.href+="?value=0"
+    }
+
     if(!getLocalStorage("products")){
         let page=1
 
@@ -89,6 +93,7 @@ function loadPage(page){
 
 
     arr.forEach((element, index) => {
+
         pageNum.innerHTML+=`<a href="${window.location.href.split("?")[0]}?val=${index}&${window.location.href.split("?")[1].split("&")[1]}" style="color:${+val+1===index+1?"red":""}">${index+1}</a>`
     });
 
