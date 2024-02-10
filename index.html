@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<section>
+    <label for="search">Search</label>
+    <input type="text" name="search" id="search">
+    <button onclick="test()"> search </button>
+
+</section>
+
+
+<section id="productsSection">
+
+<!--    <div class="product">-->
+<!--        <div class="imageContainer">-->
+<!--            <img src="https://i.imgur.com/Tmx1RF9.jpg" alt="">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="product"></div>-->
+<!--    <div class="product"></div>-->
+<!--    <div class="product"></div>-->
+<!--    <div class="product"></div>-->
+<!--    <div class="product"></div>-->
+
+</section>
+<section id="pagination">
+    <button onclick="changePage('-')">left</button>
+    <div id="pageNum">
+
+    </div>
+
+    <button onclick="changePage('+')">right</button>
+</section>
+
+
+<script>
+
+    // console.log(val)
+    fillProductArr()
+    loadPage(val?val:0)
+
+</script>
+
+
+</body>
+</html>
